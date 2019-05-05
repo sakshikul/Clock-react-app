@@ -1,4 +1,6 @@
 import React from "react";
+import "./Clock.css";
+
 
 class Clock extends React.Component{
     constructor(props){
@@ -8,9 +10,12 @@ class Clock extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className ="clock">
                
-                <h2>The current time is {this.state.date.toLocaleTimeString()}</h2>
+                <h2 className = "clock__display">The current time is {this.state.date.toLocaleTimeString()}</h2>
+                <div className = "clock__image">
+                <img src ="./images/clock.png" alt ="clock" />
+                </div>
             </div>
         )
     }
